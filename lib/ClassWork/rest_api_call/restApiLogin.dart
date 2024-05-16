@@ -2,14 +2,14 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
-class ApiLoginScreen extends StatefulWidget {
-  const ApiLoginScreen({Key? key}) : super(key: key);
+class RestApiLogin extends StatefulWidget {
+  const RestApiLogin({Key? key}) : super(key: key);
 
   @override
-  State<ApiLoginScreen> createState() => _LoginScreenState();
+  State<RestApiLogin> createState() => _LoginScreenState();
 }
 
-class _LoginScreenState extends State<ApiLoginScreen> {
+class _LoginScreenState extends State<RestApiLogin> {
   Map<String, String> get headers => <String, String>{
         'Content-Type': 'application/json',
         'Accept': 'application/json',

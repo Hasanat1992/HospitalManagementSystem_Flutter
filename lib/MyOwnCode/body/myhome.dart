@@ -2,6 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:hospital_management_system/MyOwnCode/body/rowSingleChildScrollView.dart';
+import 'package:hospital_management_system/bodyMain.dart';
+
 
 class MyHome extends StatelessWidget {
   const MyHome({super.key});
@@ -42,14 +44,15 @@ class MyHome extends StatelessWidget {
       //       "Get all medical services. Take treatment from home. Book your appointment. Our team is ready to welcome you"),
       // ),
 
-      body: PracticeN2(),
+      // body: PracticeN2(),
+       body: BodyMain(),
       drawer: Drawer(
         child: ListView(
           padding: EdgeInsets.zero,
           children: [
             const DrawerHeader(
                 decoration: BoxDecoration(
-                  color: Colors.green,
+                  color: Color.fromARGB(197, 230, 230, 241),
                 ),
                 child: Center(
                   child: Text('Admin Panel',
@@ -111,7 +114,7 @@ class MyHome extends StatelessWidget {
                 child: IconButton(
                     onPressed: () {
                       Navigator.pushNamedAndRemoveUntil(
-                          context, "/formEx", (route) => true);
+                          context, "/springSignUp", (route) => true);
                       print("Admission Button Clicked");
                     },
                     icon: Icon(Icons.arrow_forward)),
@@ -125,7 +128,7 @@ class MyHome extends StatelessWidget {
                   child: IconButton(
                       onPressed: () {
                         Navigator.pushNamedAndRemoveUntil(
-                            context, "/firebase", (route) => true);
+                            context, "/fireBaseAdd", (route) => true);
                         print("Firebase Button Clicked");
                       },
                       icon: Icon(Icons.timer)),
@@ -137,15 +140,15 @@ class MyHome extends StatelessWidget {
       ),
       // endDrawer: Container(),
       // bottomNavigationBar: Container(),// AppBer button is not working
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          Navigator.pushNamedAndRemoveUntil(context, "/login", (route) => true);
-          print("Login Button Clicked");
-        },
-        elevation: 0,
-        child: Icon(Icons.logout),
-        backgroundColor: Colors.greenAccent,
-      ),
+      // floatingActionButton: FloatingActionButton(
+      //   onPressed: () {
+      //     Navigator.pushNamedAndRemoveUntil(context, "/myLoginScreen", (route) => true);
+      //     print("Login Button Clicked");
+      //   },
+      //   elevation: 0,
+      //   child: Icon(Icons.logout),
+      //   backgroundColor: Colors.greenAccent,
+      // ),
     );
   }
 }

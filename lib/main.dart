@@ -1,21 +1,28 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:hospital_management_system/MyOwnCode/body/firebase_options.dart';
-// import 'package:hospital_management_system/MyOwnCode/body/formExampleApp.dart';
-import 'package:hospital_management_system/MyOwnCode/body/home.dart';
-import 'package:hospital_management_system/MyOwnCode/body/loginScreen.dart';
+import 'package:hospital_management_system/ClassWork/firebase_options.dart';
+import 'package:hospital_management_system/ClassWork/pages/add_image.dart';
+import 'package:hospital_management_system/ClassWork/pages/springSignUp.dart';
+import 'package:hospital_management_system/ClassWork/pages/springUsers.dart';
+import 'package:hospital_management_system/ClassWork/pages/springloginAPI.dart';
+import 'package:hospital_management_system/ClassWork/rest_api_call/restApiLogin.dart';
+import 'package:hospital_management_system/ClassWork/pages/fireBaseAdd.dart';
+import 'package:hospital_management_system/EcommerceApp/screens/all_product/all_product_screen.dart';
+import 'package:hospital_management_system/EcommerceApp/screens/home/components/body.dart';
+import 'package:hospital_management_system/EcommerceApp/screens/home/components/categories.dart';
+import 'package:hospital_management_system/MyOwnCode/body/bottomNavigationBar.dart';
+import 'package:hospital_management_system/MyOwnCode/body/myLoginScreen.dart';
 import 'package:hospital_management_system/MyOwnCode/body/myhome.dart';
 import 'package:hospital_management_system/MyOwnCode/body/page1.dart';
 import 'package:hospital_management_system/MyOwnCode/body/page2.dart';
 import 'package:hospital_management_system/MyOwnCode/body/page3.dart';
 import 'package:hospital_management_system/MyOwnCode/body/registrationSctreen.dart';
-import 'package:hospital_management_system/add_image.dart';
-
-import 'package:hospital_management_system/pages/create.dart';
-import 'package:hospital_management_system/pages/data_list.dart';
-import 'package:hospital_management_system/pages/login.dart';
 import 'package:liquid_swipe/liquid_swipe.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+
+
+
+
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -45,15 +52,24 @@ class MyApp extends StatelessWidget {
           colorScheme: ColorScheme.fromSeed(
         seedColor: Color.fromARGB(255, 47, 173, 40),
       )),
-      initialRoute: "/home",
+      initialRoute: "/myLoginScreen",
       routes: {
-        "/login": (context) => LoginScreen(),
-        // "/home": (context) => loginAPI(),
-        // "/home": (context) => AddImage(),
-        // "/home": (context) => FormPage2(),
-        // "/home": (context) => dataList(),
-        "/home": (context) => FireBase(),
-        "/regis": (context) => RegistrationScreen(),
+      
+        // "/home": (context) => SpringUsers(),
+            // "/home": (context) => SpringloginAPI(),
+        // "/home": (context) => RestApiLogin(),
+        //  "/home": (context) => AddImage(),
+        // "/home": (context) => MyLoginScreen(),
+            "/fireBaseAdd": (context) => FireBaseAdd(),
+            "/springSignUp": (context) => SpringSignUp(),
+             "/registrationScreen": (context) => RegistrationScreen(),     
+              "/myLoginScreen": (context) => MyLoginScreen(),   
+                "/myHome": (context) => MyHome(),
+          "/fireBaseAdd": (context) => FireBaseAdd(),
+                              //  "/springSignUp": (context) => SpringSignUp(),
+        // "/home": (context) => HomeScreen(),
+        // "/home": (context) => MyBottomNavigationBar(),
+        // "/regis": (context) => RegistrationScreen(),
         // "/firebase": (context) => FireBase(),
         // "/formEx": (context) => const FormPage(title: 'Flutter Form Demo Page'),
       },

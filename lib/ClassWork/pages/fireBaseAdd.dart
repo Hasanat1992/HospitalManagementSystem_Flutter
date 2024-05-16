@@ -1,21 +1,21 @@
 import 'dart:convert';
-
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:hospital_management_system/MyOwnCode/service/firestore.dart';
+import 'package:hospital_management_system/ClassWork/service/firestore.dart';
 
-class FireBase extends StatefulWidget {
-  const FireBase({super.key});
+
+class FireBaseAdd extends StatefulWidget {
+  const FireBaseAdd({super.key});
 
   @override
-  State<FireBase> createState() => _MyWidgetState();
+  State<FireBaseAdd> createState() => _MyWidgetState();
 }
 
 final FirestoreService fs = FirestoreService();
 final TextEditingController txc = TextEditingController();
 
-class _MyWidgetState extends State<FireBase> {
+class _MyWidgetState extends State<FireBaseAdd> {
   void openNoteBox(String? docId) {
     showDialog(
         context: context,

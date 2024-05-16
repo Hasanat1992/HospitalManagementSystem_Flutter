@@ -1,17 +1,17 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
-import 'package:hospital_management_system/model/users.dart';
+import 'package:hospital_management_system/ClassWork/model/users.dart';
 import 'package:http/http.dart' as http;
 
-class dataList extends StatefulWidget {
-  const dataList({super.key});
+class SpringUsers extends StatefulWidget {
+  const SpringUsers({super.key});
 
   @override
-  State<dataList> createState() => _dataListState();
+  State<SpringUsers> createState() => _dataListState();
 }
 
-class _dataListState extends State<dataList> {
+class _dataListState extends State<SpringUsers> {
   late List<users>? _userModel = [];
 
   final String login = "http://192.168.20.46:8080/api/users";

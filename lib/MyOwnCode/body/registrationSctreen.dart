@@ -167,7 +167,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                                   passwordTextEditingController.text);
                           loginAndAuthenticateUser(context);
                           Navigator.pushNamedAndRemoveUntil(
-                              context, "/login", (route) => true);
+                              context, "/myLoginScreen", (route) => true);
                           print("Login Button Clicked");
                         }
                       },
@@ -180,7 +180,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                     print("Registered Button Clicked");
 
                     Navigator.pushNamedAndRemoveUntil(
-                        context, "/login", (route) => false);
+                        context, "/myLoginScreen", (route) => false);
                   },
                   child: Text("Already own an account? Login instead"))
             ],

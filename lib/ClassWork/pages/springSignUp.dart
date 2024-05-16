@@ -1,21 +1,21 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
-import 'package:hospital_management_system/model/users.dart';
-import 'package:hospital_management_system/pages/data_list.dart';
+import 'package:hospital_management_system/ClassWork/model/users.dart';
+import 'package:hospital_management_system/ClassWork/pages/springUsers.dart';
 import 'package:http/http.dart' as http;
 
-class FormPage2 extends StatefulWidget {
+class SpringSignUp extends StatefulWidget {
   // const FormPage2({Key? key, required this.title}) : super(key: key);
 
   final users? psModel;
-  FormPage2({this.psModel});
+  SpringSignUp({this.psModel});
 
   @override
   _FormPageState createState() => _FormPageState();
 }
 
-class _FormPageState extends State<FormPage2> {
+class _FormPageState extends State<SpringSignUp> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -327,7 +327,7 @@ class _SignUpFormState extends State<SignUpForm> {
         Navigator.pushAndRemoveUntil<dynamic>(
           context,
           MaterialPageRoute<dynamic>(
-            builder: (BuildContext context) => dataList(),
+            builder: (BuildContext context) => SpringUsers(),
           ),
           (route) => false,
         );
@@ -347,7 +347,7 @@ class _SignUpFormState extends State<SignUpForm> {
           //   ),
           //   (route) => false,
           // );
-          // Navigator.pushNamedAndRemoveUntil(context, "/regis", (route) => true);
+          Navigator.pushNamedAndRemoveUntil(context, "/myHome", (route) => true);
 
           // print("Registration Button Clicked");
         }));

@@ -3,14 +3,14 @@ import 'package:hospital_management_system/MyOwnCode/body/page1.dart';
 import 'package:hospital_management_system/MyOwnCode/body/page2.dart';
 import 'package:hospital_management_system/MyOwnCode/body/page3.dart';
 
-class MyWidget extends StatefulWidget {
-  const MyWidget({super.key});
+class MyBottomNavigationBar extends StatefulWidget {
+  const MyBottomNavigationBar({super.key});
 
   @override
-  State<MyWidget> createState() => _MyWidgetState();
+  State<MyBottomNavigationBar> createState() => _MyWidgetState();
 }
 
-class _MyWidgetState extends State<MyWidget> {
+class _MyWidgetState extends State<MyBottomNavigationBar> {
   var _currentState = 1;
   final pages = [
     Page1(),

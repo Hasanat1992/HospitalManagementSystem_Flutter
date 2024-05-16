@@ -1,5 +1,4 @@
 import 'dart:io';
-
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
@@ -31,7 +30,7 @@ class _MyWidgetState extends State<AddImage> {
                     onPressed: () async {
                       ImagePicker imagePicker = ImagePicker();
                       XFile? file = await imagePicker.pickImage(
-                          source: ImageSource.gallery);
+                          source: ImageSource.camera);
                       print('${file?.path}');
                       if (file == null) return;
                       String uniqueFileName =

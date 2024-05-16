@@ -4,14 +4,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:http/http.dart' as http;
 
-class loginAPI extends StatefulWidget {
-  const loginAPI({super.key});
+class SpringloginAPI extends StatefulWidget {
+  const SpringloginAPI({super.key});
 
   @override
-  State<loginAPI> createState() => _loginAPIState();
+  State<SpringloginAPI> createState() => _loginAPIState();
 }
 
-class _loginAPIState extends State<loginAPI> {
+class _loginAPIState extends State<SpringloginAPI> {
   TextEditingController emailTextEditingController = TextEditingController();
   TextEditingController passwordTextEditingController = TextEditingController();
 

@@ -6,14 +6,14 @@ import 'package:fluttertoast/fluttertoast.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:http/http.dart' as http;
 
-class LoginScreen extends StatefulWidget {
-  const LoginScreen({Key? key}) : super(key: key);
+class MyLoginScreen extends StatefulWidget {
+  const MyLoginScreen({Key? key}) : super(key: key);
 
   @override
-  State<LoginScreen> createState() => _LoginScreenState();
+  State<MyLoginScreen> createState() => _LoginScreenState();
 }
 
-class _LoginScreenState extends State<LoginScreen> {
+class _LoginScreenState extends State<MyLoginScreen> {
   TextEditingController usernameTextEditingController = TextEditingController();
   TextEditingController passwordTextEditingController = TextEditingController();
   bool _isNotValided = false;
@@ -159,8 +159,8 @@ class _LoginScreenState extends State<LoginScreen> {
                           loginData();
                           // print(usernameTextEditingController.text);
                           // print(passwordTextEditingController.text);
-                          // Navigator.pushNamedAndRemoveUntil(
-                          //     context, "/home", (route) => true);
+                          Navigator.pushNamedAndRemoveUntil(
+                              context, "/myHome", (route) => true);
                           print("Login Button Clicked");
                         }
                       },
@@ -171,7 +171,7 @@ class _LoginScreenState extends State<LoginScreen> {
               TextButton(
                   onPressed: () {
                     Navigator.pushNamedAndRemoveUntil(
-                        context, "/regis", (route) => true);
+                        context, "/registrationScreen", (route) => true);
 
                     print("Registration Button Clicked");
                   },
