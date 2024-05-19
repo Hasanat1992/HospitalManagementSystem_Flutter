@@ -20,7 +20,7 @@ class _FormPageState extends State<SpringSignUp> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Bangladesh.."),
+        title: Text("Insert Admission information: "),
       ),
       body: Container(
         padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),

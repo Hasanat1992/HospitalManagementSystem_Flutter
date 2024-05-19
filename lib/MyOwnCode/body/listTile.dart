@@ -1,8 +1,8 @@
 //ListTail It used to design a list of data
 import 'package:flutter/material.dart';
 
-class PracticeN5 extends StatelessWidget {
-  const PracticeN5({Key? key}) : super(key: key);
+class MyListTile extends StatelessWidget {
+  const MyListTile({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

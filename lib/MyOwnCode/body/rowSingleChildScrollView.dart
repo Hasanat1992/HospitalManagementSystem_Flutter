@@ -2,14 +2,14 @@
 
 import 'package:flutter/material.dart';
 
-class PracticeN2 extends StatelessWidget {
-  const PracticeN2({Key? key}) : super(key: key);
+class rowSingleChildScrollView extends StatelessWidget {
+  const rowSingleChildScrollView({Key? key}) : super(key: key);
 
   // get controller => null;
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return SafeArea(child: Scaffold(
       body: SingleChildScrollView(
         scrollDirection: Axis.horizontal,
         child: Row(children: [
@@ -60,6 +60,7 @@ class PracticeN2 extends StatelessWidget {
           ),
         ]),
       ),
-    );
+    ));
+    
   }
 }

@@ -11,12 +11,15 @@ import 'package:hospital_management_system/EcommerceApp/screens/all_product/all_
 import 'package:hospital_management_system/EcommerceApp/screens/home/components/body.dart';
 import 'package:hospital_management_system/EcommerceApp/screens/home/components/categories.dart';
 import 'package:hospital_management_system/MyOwnCode/body/bottomNavigationBar.dart';
+import 'package:hospital_management_system/MyOwnCode/body/gridView.dart';
+import 'package:hospital_management_system/MyOwnCode/body/listTile.dart';
 import 'package:hospital_management_system/MyOwnCode/body/myLoginScreen.dart';
 import 'package:hospital_management_system/MyOwnCode/body/myhome.dart';
 import 'package:hospital_management_system/MyOwnCode/body/page1.dart';
 import 'package:hospital_management_system/MyOwnCode/body/page2.dart';
 import 'package:hospital_management_system/MyOwnCode/body/page3.dart';
 import 'package:hospital_management_system/MyOwnCode/body/registrationSctreen.dart';
+import 'package:hospital_management_system/MyOwnCode/body/rowSingleChildScrollView.dart';
 import 'package:liquid_swipe/liquid_swipe.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -53,6 +56,7 @@ class MyApp extends StatelessWidget {
         seedColor: Color.fromARGB(255, 47, 173, 40),
       )),
       initialRoute: "/myLoginScreen",
+            // initialRoute: "/home",
       routes: {
       
         // "/home": (context) => SpringUsers(),
@@ -60,16 +64,27 @@ class MyApp extends StatelessWidget {
         // "/home": (context) => RestApiLogin(),
         //  "/home": (context) => AddImage(),
         // "/home": (context) => MyLoginScreen(),
+  // "/home": (context) => MyBottomNavigationBar(),
+    // "/home": (context) => MyGridView(),
+    //  "/home": (context) => rowSingleChildScrollView(),
+        // "/home": (context) => MyListTile(),
+        // -------------
+
             "/fireBaseAdd": (context) => FireBaseAdd(),
             "/springSignUp": (context) => SpringSignUp(),
              "/registrationScreen": (context) => RegistrationScreen(),     
               "/myLoginScreen": (context) => MyLoginScreen(),   
                 "/myHome": (context) => MyHome(),
-          "/fireBaseAdd": (context) => FireBaseAdd(),
-                              //  "/springSignUp": (context) => SpringSignUp(),
-        // "/home": (context) => HomeScreen(),
-        // "/home": (context) => MyBottomNavigationBar(),
-        // "/regis": (context) => RegistrationScreen(),
+                         "/springUsers": (context) => SpringUsers(),
+                            "/addImage": (context) => AddImage(),
+                              "/myGridView": (context) => MyGridView(),
+                    "/rowSingleChildScrollView": (context) => rowSingleChildScrollView(),
+// ------------------
+
+                             
+      
+
+    
         // "/firebase": (context) => FireBase(),
         // "/formEx": (context) => const FormPage(title: 'Flutter Form Demo Page'),
       },

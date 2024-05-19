@@ -48,7 +48,7 @@ class _dataListState extends State<SpringUsers> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Rest API Example for Post"),
+        title: const Text("Appointed Patients:"),
         actions: [
           IconButton(
             onPressed: () {

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:flutter/widgets.dart';
 import 'package:hospital_management_system/ClassWork/service/firestore.dart';
 
 class BodyMain extends StatefulWidget {
@@ -144,7 +145,9 @@ class _HomeScreenState extends State<BodyMain> {
         itemCount: 7,
         itemBuilder: (context, index) {
           return InkWell(
-            onTap: () {},
+            onTap: () {
+               Navigator.of(context).pushNamed("/myGridView");
+            },
             child: Container(
               margin: const EdgeInsets.only(right: 10.0),
               child: Card(
@@ -257,7 +260,9 @@ class _HomeScreenState extends State<BodyMain> {
         itemCount: 7,
         itemBuilder: (context, index) {
           return InkWell(
-            onTap: () {},
+            onTap: () {
+                Navigator.of(context).pushNamed("/rowSingleChildScrollView");
+            },
             child: Container(
               margin: const EdgeInsets.only(right: 10.0),
               child: Card(
@@ -358,7 +363,8 @@ class _HomeScreenState extends State<BodyMain> {
         children: [
           InkWell(
             onTap: () {
-              openNoteBox(null);
+              // openNoteBox(null);
+                 Navigator.of(context).pushNamed("/fireBaseAdd");
             },
             child: const Column(
               children: [
@@ -384,7 +390,10 @@ class _HomeScreenState extends State<BodyMain> {
           ),
           InkWell(
             onTap: () {
-              Navigator.of(context).pushNamed("/products");
+              Navigator.of(context).pushNamed("/registrationScreen");
+            
+                      
+                   
             },
             child: const Column(
               children: [
@@ -409,7 +418,12 @@ class _HomeScreenState extends State<BodyMain> {
             ),
           ),
           InkWell(
-            onTap: () {},
+            onTap: () {
+                        Navigator.pushNamedAndRemoveUntil(
+                            context, "/addImage", (route) => true);
+                        print("Firebase Button Clicked");
+                   
+            },
             child: const Column(
               children: [
                 CircleAvatar(
@@ -462,13 +476,19 @@ class _HomeScreenState extends State<BodyMain> {
           label: "",
         ),
         BottomNavigationBarItem(
+      
           icon: Icon(
-            Icons.call,
+            Icons.app_registration,
             color: Colors.black,
+            
           ),
           label: "",
+        
         ),
+
       ],
+     
     );
+    
   }
 }

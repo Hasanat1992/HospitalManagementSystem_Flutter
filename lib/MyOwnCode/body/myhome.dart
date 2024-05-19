@@ -12,11 +12,11 @@ class MyHome extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Hospital Management System"),
+        title: const Text("Hospital Management"),
         centerTitle: true,
 
         // leading: const Icon(Icons.account_balance_sharp),
-        // actions: [
+        actions: [
         // IconButton(
         //     onPressed: () {
         //       print("aaaa");
@@ -32,12 +32,13 @@ class MyHome extends StatelessWidget {
         //       print("aaaa");
         //     },
         //     icon: Icon(Icons.account_balance_sharp)),
-        // IconButton(
-        //     onPressed: () {
-        //       print("bbbb");
-        //     },
-        //     icon: Icon(Icons.account_balance_wallet)),
-        // ],
+        IconButton(
+               onPressed: () {
+          Navigator.pushNamedAndRemoveUntil(context, "/myLoginScreen", (route) => true);
+          print("Login Button Clicked");
+        },
+            icon: Icon(Icons.logout)),
+        ],
       ),
       // body: Center(
       //   child: Text(
@@ -79,7 +80,14 @@ class MyHome extends StatelessWidget {
               title: Text("Patients"),
               subtitle: Text("Appointed patients information..."),
               leading: CircleAvatar(
-                child: Icon(Icons.info_rounded),
+                // child: Icon(Icons.info_rounded),
+                 child: IconButton(
+                      onPressed: () {
+                        Navigator.pushNamedAndRemoveUntil(
+                            context, "/springUsers", (route) => true);
+                        print("Firebase Button Clicked");
+                      },
+                      icon: Icon(Icons.info_rounded)),
               ),
               // trailing: Icon(Icons.account_circle),
             ),

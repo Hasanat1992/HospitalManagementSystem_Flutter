@@ -28,25 +28,25 @@ class _LoginScreenState extends State<MyLoginScreen> {
     prefs = await SharedPreferences.getInstance();
   }
 
-  final String login = 'http://localhost:8080/loginregistration';
+  // final String login = 'http://localhost:8080/loginregistration';
 
-  void loginData() async {
-    var reqbody = {
-      "username": usernameTextEditingController.text,
-      "password": passwordTextEditingController.text
-    };
+  // void loginData() async {
+  //   var reqbody = {
+  //     "username": usernameTextEditingController.text,
+  //     "password": passwordTextEditingController.text
+  //   };
 
-    var response = await http.post(Uri.parse(login),
-        headers: {"Content-Type": "application/json"},
-        body: jsonEncode(reqbody));
+  //   var response = await http.post(Uri.parse(login),
+  //       headers: {"Content-Type": "application/json"},
+  //       body: jsonEncode(reqbody));
 
-    var jsonResponse = jsonDecode(response.body);
-    const storage = FlutterSecureStorage();
-    await storage.write(key: 'token', value: jsonResponse['jwtToken']);
+  //   var jsonResponse = jsonDecode(response.body);
+  //   const storage = FlutterSecureStorage();
+  //   await storage.write(key: 'token', value: jsonResponse['jwtToken']);
 
-    print(jsonResponse);
-    print(response.statusCode);
-  }
+  //   print(jsonResponse);
+  //   print(response.statusCode);
+  // }
 
   @override
   Widget build(BuildContext context) {
@@ -156,7 +156,7 @@ class _LoginScreenState extends State<MyLoginScreen> {
                               " " +
                               passwordTextEditingController.text);
                           loginAndAuthenticateUser(context);
-                          loginData();
+                          // loginData();
                           // print(usernameTextEditingController.text);
                           // print(passwordTextEditingController.text);
                           Navigator.pushNamedAndRemoveUntil(
