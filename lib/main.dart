@@ -20,12 +20,9 @@ import 'package:hospital_management_system/MyOwnCode/body/page2.dart';
 import 'package:hospital_management_system/MyOwnCode/body/page3.dart';
 import 'package:hospital_management_system/MyOwnCode/body/registrationSctreen.dart';
 import 'package:hospital_management_system/MyOwnCode/body/rowSingleChildScrollView.dart';
+import 'package:hospital_management_system/bodyMain.dart';
 import 'package:liquid_swipe/liquid_swipe.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-
-
-
-
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -56,36 +53,32 @@ class MyApp extends StatelessWidget {
         seedColor: Color.fromARGB(255, 47, 173, 40),
       )),
       initialRoute: "/myLoginScreen",
-            // initialRoute: "/home",
+      // initialRoute: "/home",
       routes: {
-      
         // "/home": (context) => SpringUsers(),
-            // "/home": (context) => SpringloginAPI(),
+        // "/home": (context) => SpringloginAPI(),
         // "/home": (context) => RestApiLogin(),
         //  "/home": (context) => AddImage(),
         // "/home": (context) => MyLoginScreen(),
-  // "/home": (context) => MyBottomNavigationBar(),
-    // "/home": (context) => MyGridView(),
-    //  "/home": (context) => rowSingleChildScrollView(),
+        // "/home": (context) => MyBottomNavigationBar(),
+        // "/home": (context) => MyGridView(),
+        //  "/home": (context) => rowSingleChildScrollView(),
         // "/home": (context) => MyListTile(),
         // -------------
 
-            "/fireBaseAdd": (context) => FireBaseAdd(),
-            "/springSignUp": (context) => SpringSignUp(),
-             "/registrationScreen": (context) => RegistrationScreen(),     
-              "/myLoginScreen": (context) => MyLoginScreen(),   
-                "/myHome": (context) => MyHome(),
-                         "/springUsers": (context) => SpringUsers(),
-                            "/addImage": (context) => AddImage(),
-                              "/myGridView": (context) => MyGridView(),
-                    "/rowSingleChildScrollView": (context) => rowSingleChildScrollView(),
-// ------------------
+        "/fireBaseAdd": (context) => FireBaseAdd(),
+        "/springSignUp": (context) => SpringSignUp(),
+        "/registrationScreen": (context) => RegistrationScreen(),
+        "/myLoginScreen": (context) => MyLoginScreen(),
+        "/myHome": (context) => MyHome(),
+        "/springUsers": (context) => SpringUsers(),
+        "/addImage": (context) => AddImage(),
+        "/myGridView": (context) => MyGridView(),
+        "/rowSingleChildScrollView": (context) => rowSingleChildScrollView(),
+        // ------------------
+        "/bodyMain": (context) => BodyMain(),
+        // ----------------
 
-                             
-      
-
-    
-        // "/firebase": (context) => FireBase(),
         // "/formEx": (context) => const FormPage(title: 'Flutter Form Demo Page'),
       },
       debugShowCheckedModeBanner: false,
