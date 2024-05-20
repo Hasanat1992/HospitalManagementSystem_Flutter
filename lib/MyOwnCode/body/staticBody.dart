@@ -1,8 +1,8 @@
 // body
 import 'package:flutter/material.dart';
 
-class Practice2 extends StatelessWidget {
-  const Practice2({Key? key}) : super(key: key);
+class StaticBody extends StatelessWidget {
+  const StaticBody({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

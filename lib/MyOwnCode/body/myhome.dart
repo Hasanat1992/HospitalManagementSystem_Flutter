@@ -64,7 +64,14 @@ class MyHome extends StatelessWidget {
               title: Text("Departments"),
               subtitle: Text("The hospital has 20 departments..."),
               leading: CircleAvatar(
-                child: Icon(Icons.class_),
+                // child: Icon(Icons.class_),
+                  child: IconButton(
+                      onPressed: () {
+                        Navigator.pushNamedAndRemoveUntil(
+                            context, "/allDepartment", (route) => true);
+                        print("Department Button Clicked");
+                      },
+                      icon: Icon(Icons.class_)),
               ),
               // trailing: Icon(Icons.account_circle),
             ),
@@ -72,7 +79,14 @@ class MyHome extends StatelessWidget {
               title: Text("Doctors"),
               subtitle: Text("See Doctors list..."),
               leading: CircleAvatar(
-                child: Icon(Icons.health_and_safety),
+                // child: Icon(Icons.health_and_safety),
+                 child: IconButton(
+                      onPressed: () {
+                        Navigator.pushNamedAndRemoveUntil(
+                            context, "/doctors", (route) => true);
+                        print("Doctors Button Clicked");
+                      },
+                      icon: Icon(Icons.health_and_safety)),
               ),
               // trailing: Icon(Icons.account_circle),
             ),
@@ -84,7 +98,7 @@ class MyHome extends StatelessWidget {
                  child: IconButton(
                       onPressed: () {
                         Navigator.pushNamedAndRemoveUntil(
-                            context, "/springUsers", (route) => true);
+                            context, "/allPatient", (route) => true);
                         print("Firebase Button Clicked");
                       },
                       icon: Icon(Icons.info_rounded)),
@@ -111,7 +125,14 @@ class MyHome extends StatelessWidget {
               title: Text("Diagnosis"),
               subtitle: Text("Patients diagnosis information.."),
               leading: CircleAvatar(
-                child: Icon(Icons.find_in_page),
+                // child: Icon(Icons.find_in_page),
+                child: IconButton(
+                    onPressed: () {
+                      Navigator.pushNamedAndRemoveUntil(
+                          context, "/addImage", (route) => true);
+                      print("addImage Button Clicked");
+                    },
+                    icon: Icon(Icons.find_in_page)),
               ),
               // trailing: Icon(Icons.account_circle),
             ),

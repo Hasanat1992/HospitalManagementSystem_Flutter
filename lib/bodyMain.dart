@@ -189,7 +189,7 @@ class _HomeScreenState extends State<BodyMain> {
                                 Container(
                                   margin: const EdgeInsets.only(right: 100),
                                   child: const Text(
-                                    ".                                      .",
+                                    ".                                   .",
                                     style: TextStyle(
                                       color: Colors.black,
                                       fontSize: 15,
@@ -390,7 +390,7 @@ class _HomeScreenState extends State<BodyMain> {
           ),
           InkWell(
             onTap: () {
-              Navigator.of(context).pushNamed("/registrationScreen");
+              Navigator.of(context).pushNamed("/doctors");
             
                       
                    
@@ -420,7 +420,7 @@ class _HomeScreenState extends State<BodyMain> {
           InkWell(
             onTap: () {
                         Navigator.pushNamedAndRemoveUntil(
-                            context, "/addImage", (route) => true);
+                            context, "/allDepartment", (route) => true);
                         print("Firebase Button Clicked");
                    
             },

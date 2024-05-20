@@ -25,7 +25,6 @@ class _FormPageState extends State<SpringSignUp> {
       body: Container(
         padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
         child: SignUpForm(psModel2: widget.psModel),
-
         // child: widget.psModel==null ? SignUpForm():SignUpForm(psModel2: widget.psModel),
       ),
     );

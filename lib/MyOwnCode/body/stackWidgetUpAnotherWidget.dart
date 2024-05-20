@@ -1,8 +1,8 @@
 //Stack  It used to create weget up above another weget.
 import 'package:flutter/material.dart';
 
-class PracticeN6 extends StatelessWidget {
-  const PracticeN6({Key? key}) : super(key: key);
+class stackWidgetUpAnotherWidget extends StatelessWidget {
+  const stackWidgetUpAnotherWidget({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

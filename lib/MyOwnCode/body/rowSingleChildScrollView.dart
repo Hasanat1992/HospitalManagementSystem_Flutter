@@ -1,5 +1,3 @@
-
-
 import 'package:flutter/material.dart';
 
 class rowSingleChildScrollView extends StatelessWidget {
@@ -9,7 +7,8 @@ class rowSingleChildScrollView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(child: Scaffold(
+    return SafeArea(
+        child: Scaffold(
       body: SingleChildScrollView(
         scrollDirection: Axis.horizontal,
         child: Row(children: [
@@ -22,11 +21,29 @@ class rowSingleChildScrollView extends StatelessWidget {
             color: Colors.cyan,
             width: 100.0,
             height: double.infinity,
+            child: const Center(
+              child: Text(
+                "Coming Soon...",
+                style: TextStyle(
+                    color: Colors.yellow,
+                    fontSize: 25.0,
+                    fontWeight: FontWeight.bold),
+              ),
+            ),
           ),
           Container(
             color: Colors.teal,
             width: 100.0,
             height: double.infinity,
+               child: const Center(
+              child: Text(
+                "Coming Soon...",
+                style: TextStyle(
+                    color: Colors.yellow,
+                    fontSize: 25.0,
+                    fontWeight: FontWeight.bold),
+              ),
+            ),
           ),
           Container(
             color: Colors.amberAccent,
@@ -61,6 +78,5 @@ class rowSingleChildScrollView extends StatelessWidget {
         ]),
       ),
     ));
-    
   }
 }

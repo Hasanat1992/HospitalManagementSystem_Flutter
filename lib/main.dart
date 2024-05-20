@@ -2,6 +2,9 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:hospital_management_system/ClassWork/firebase_options.dart';
 import 'package:hospital_management_system/ClassWork/pages/add_image.dart';
+import 'package:hospital_management_system/ClassWork/pages/allDepartment.dart';
+import 'package:hospital_management_system/ClassWork/pages/allPatients.dart';
+import 'package:hospital_management_system/ClassWork/pages/springDoctors.dart';
 import 'package:hospital_management_system/ClassWork/pages/springSignUp.dart';
 import 'package:hospital_management_system/ClassWork/pages/springUsers.dart';
 import 'package:hospital_management_system/ClassWork/pages/springloginAPI.dart';
@@ -11,6 +14,7 @@ import 'package:hospital_management_system/EcommerceApp/screens/all_product/all_
 import 'package:hospital_management_system/EcommerceApp/screens/home/components/body.dart';
 import 'package:hospital_management_system/EcommerceApp/screens/home/components/categories.dart';
 import 'package:hospital_management_system/MyOwnCode/body/bottomNavigationBar.dart';
+import 'package:hospital_management_system/MyOwnCode/body/column.dart';
 import 'package:hospital_management_system/MyOwnCode/body/gridView.dart';
 import 'package:hospital_management_system/MyOwnCode/body/listTile.dart';
 import 'package:hospital_management_system/MyOwnCode/body/myLoginScreen.dart';
@@ -20,6 +24,8 @@ import 'package:hospital_management_system/MyOwnCode/body/page2.dart';
 import 'package:hospital_management_system/MyOwnCode/body/page3.dart';
 import 'package:hospital_management_system/MyOwnCode/body/registrationSctreen.dart';
 import 'package:hospital_management_system/MyOwnCode/body/rowSingleChildScrollView.dart';
+import 'package:hospital_management_system/MyOwnCode/body/stackWidgetUpAnotherWidget.dart';
+import 'package:hospital_management_system/MyOwnCode/body/staticBody.dart';
 import 'package:hospital_management_system/bodyMain.dart';
 import 'package:liquid_swipe/liquid_swipe.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -64,8 +70,13 @@ class MyApp extends StatelessWidget {
         // "/home": (context) => MyGridView(),
         //  "/home": (context) => rowSingleChildScrollView(),
         // "/home": (context) => MyListTile(),
+          // "/home": (context) => Doctors(),
+            // "/home": (context) => AllPatient(),
+               //  "/home": (context) => AllDepartment(),
+                //  "/home": (context) => stackWidgetUpAnotherWidget(),
+                  // "/home": (context) => MyColumn(),
+                   "/StaticBody": (context) => StaticBody(),
         // -------------
-
         "/fireBaseAdd": (context) => FireBaseAdd(),
         "/springSignUp": (context) => SpringSignUp(),
         "/registrationScreen": (context) => RegistrationScreen(),
@@ -75,10 +86,16 @@ class MyApp extends StatelessWidget {
         "/addImage": (context) => AddImage(),
         "/myGridView": (context) => MyGridView(),
         "/rowSingleChildScrollView": (context) => rowSingleChildScrollView(),
-        // ------------------
-        "/bodyMain": (context) => BodyMain(),
+          "/doctors": (context) => Doctors(),
+          "/allPatient": (context) => AllPatient(),
+              "/allDepartment": (context) => AllDepartment(),
+        // // ------------------
+        // "/bodyMain": (context) => BodyMain(),
         // ----------------
 
+      
+     
+  
         // "/formEx": (context) => const FormPage(title: 'Flutter Form Demo Page'),
       },
       debugShowCheckedModeBanner: false,

@@ -1,8 +1,8 @@
 // Column
 import 'package:flutter/material.dart';
 
-class Practice3 extends StatelessWidget {
-  const Practice3({Key? key}) : super(key: key);
+class MyColumn extends StatelessWidget {
+  const MyColumn({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

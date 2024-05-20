@@ -1,37 +1,36 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
-import 'package:hospital_management_system/ClassWork/model/users.dart';
+import 'package:hospital_management_system/ClassWork/model/department.dart';
+import 'package:hospital_management_system/ClassWork/model/doctors.dart';
+import 'package:hospital_management_system/ClassWork/model/patients.dart';
 import 'package:http/http.dart' as http;
 
-class SpringUsers extends StatefulWidget {
-  const SpringUsers({super.key});
+class AllDepartment extends StatefulWidget {
+  const AllDepartment({super.key});
 
   @override
-  State<SpringUsers> createState() => _dataListState();
+  State<AllDepartment> createState() => _AllDepartmentState();
 }
 
-class _dataListState extends State<SpringUsers> {
-  late List<users>? _userModel = [];
+class _AllDepartmentState extends State<AllDepartment> {
+  late List<Department>? _departmentModel = [];
 
-  // final String login = "http://192.168.20.46:8080/api/users";
-    // final String patientUrl = "http://localhost:8080/v1/api/patient";
-  final String patientUrl = "http://192.168.0.111:8080/api/users";
+  // final String doctorsUrl = "http://192.168.20.46:8080/api/doctors";
+  //  final String doctorsUrl = "https://render2-les1.onrender.com/v1/api/doctor";
+    // final String doctorsUrl = "http://localhost:8080/v1/api/doctor";
+     final String departmentsUrl = "http://192.168.0.111:8080/v1/api/hospitalDepartment";
 
-  void _getData() async {
+  void _getDepartment() async {
     const storage = FlutterSecureStorage();
     try {
       var value = await storage.read(key: 'token');
-
       print("------value------");
       print(value);
-
-      var response = await http.get(Uri.parse(patientUrl), headers: {
+      var response = await http.get(Uri.parse(departmentsUrl), headers: {
         "content-type": "application/json",
         "Authorization": "Bearer $value"
       });
-
-      _userModel = usersFromJson(response.body);
+      _departmentModel = departmentFromJson(response.body);
       Future.delayed(const Duration(seconds: 1))
           .then((value) => setState(() {}));
     } catch (e) {
@@ -43,14 +42,15 @@ class _dataListState extends State<SpringUsers> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    _getData();
+    _getDepartment();
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      
       appBar: AppBar(
-        title: const Text("Spring Users:"),
+        title: const Text("Hospital Departments:"),
         actions: [
           // IconButton(
           //   onPressed: () {
@@ -68,18 +68,18 @@ class _dataListState extends State<SpringUsers> {
           ),
         ],
       ),
-      body: _userModel == null  ? const Center(
+      body: _departmentModel == null  ? const Center(
               child: LinearProgressIndicator(),
             )
           : Center(
               child: ListView.builder(
-                itemCount: _userModel!.length,
+                itemCount: _departmentModel!.length,
                 itemBuilder: (context, Index) {
                   return ListTile(
                     // leading: FlutterLogo(size: 72.0),
                     leading: Icon(Icons.person),
-                    title: Text(_userModel![Index].username.toString()),
-                    subtitle: Text(_userModel![Index].email.toString()),
+                    title: Text(_departmentModel![Index].name.toString()),
+                    subtitle: Text(_departmentModel![Index].phone.toString()),
                     trailing: Row(
                       mainAxisSize: MainAxisSize.min,
                       children: [
