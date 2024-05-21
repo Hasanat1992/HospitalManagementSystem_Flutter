@@ -3,6 +3,8 @@ import 'package:hospital_management_system/MyOwnCode/body/page1.dart';
 import 'package:hospital_management_system/MyOwnCode/body/page2.dart';
 import 'package:hospital_management_system/MyOwnCode/body/page3.dart';
 
+
+
 class MyBottomNavigationBar extends StatefulWidget {
   const MyBottomNavigationBar({super.key});
 
@@ -13,10 +15,10 @@ class MyBottomNavigationBar extends StatefulWidget {
 class _MyWidgetState extends State<MyBottomNavigationBar> {
   var _currentState = 1;
   final pages = [
+    Page3(),
     Page1(),
     Page2(),
     Page3(),
-    Page2(),
   ];
 
   @override

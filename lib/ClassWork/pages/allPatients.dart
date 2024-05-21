@@ -61,7 +61,7 @@ class _AllPatientState extends State<AllPatient> {
           IconButton(
             onPressed: () {
               Navigator.pushNamedAndRemoveUntil(
-                  context, "/MyHome", (route) => false);
+                  context, "/myHome", (route) => false);
             },
             icon: Icon(Icons.home),
           ),

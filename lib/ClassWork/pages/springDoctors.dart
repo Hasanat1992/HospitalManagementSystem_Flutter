@@ -60,7 +60,7 @@ class _DoctorsState extends State<Doctors> {
           IconButton(
             onPressed: () {
               Navigator.pushNamedAndRemoveUntil(
-                  context, "/MyHome", (route) => false);
+                  context, "/myHome", (route) => false);
             },
             icon: Icon(Icons.home),
           ),

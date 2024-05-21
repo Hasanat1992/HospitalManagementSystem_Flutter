@@ -62,7 +62,7 @@ class _AllDepartmentState extends State<AllDepartment> {
           IconButton(
             onPressed: () {
               Navigator.pushNamedAndRemoveUntil(
-                  context, "/MyHome", (route) => false);
+                  context, "/myHome", (route) => false);
             },
             icon: Icon(Icons.home),
           ),
