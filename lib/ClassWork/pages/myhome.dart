@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:hospital_management_system/MyOwnCode/body/rowSingleChildScrollView.dart';
+import 'package:hospital_management_system/ClassWork/pages/rowSingleChildScrollView.dart';
 import 'package:hospital_management_system/bodyMain.dart';
 
 
@@ -138,13 +138,13 @@ class MyHome extends StatelessWidget {
             ),
             ListTile(
               title: Text("Admission"),
-              subtitle: Text("Confirn your admission..."),
+              subtitle: Text("All admission information..."),
               leading: CircleAvatar(
                 child: IconButton(
                     onPressed: () {
                       Navigator.pushNamedAndRemoveUntil(
-                          context, "/springSignUp", (route) => true);
-                      print("Admission Button Clicked");
+                          context, "/fireBaseAdd", (route) => true);
+                      print("fireBaseAdd Button Clicked");
                     },
                     icon: Icon(Icons.arrow_forward)),
               ),
@@ -157,8 +157,8 @@ class MyHome extends StatelessWidget {
                   child: IconButton(
                       onPressed: () {
                         Navigator.pushNamedAndRemoveUntil(
-                            context, "/fireBaseAdd", (route) => true);
-                        print("Firebase Button Clicked");
+                            context, "/addPatient", (route) => true);
+                        print("AddPatient Button Clicked");
                       },
                       icon: Icon(Icons.timer)),
                 )

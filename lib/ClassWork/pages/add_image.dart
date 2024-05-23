@@ -16,7 +16,7 @@ class _MyWidgetState extends State<AddImage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Take pic of your report: "),
+        title: const Text("Take a picture of your report: "),
       ),
       body: Center(
         child: Container(

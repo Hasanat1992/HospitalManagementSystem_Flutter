@@ -45,7 +45,7 @@ class _MyWidgetState extends State<FireBaseAdd> {
     return Scaffold(
       appBar: AppBar(
         title: const Text(
-          "Book an appointment: ",
+          "Admissions: ",
           style: TextStyle(color: Colors.black),
         ),
       ),

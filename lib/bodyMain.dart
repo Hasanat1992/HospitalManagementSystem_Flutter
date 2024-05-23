@@ -367,7 +367,7 @@ class _HomeScreenState extends State<BodyMain> {
           InkWell(
             onTap: () {
               // openNoteBox(null);
-                 Navigator.of(context).pushNamed("/fireBaseAdd");
+                 Navigator.of(context).pushNamed("/addPatient");
             },
             child: const Column(
               children: [
@@ -381,7 +381,7 @@ class _HomeScreenState extends State<BodyMain> {
                 ),
                 SizedBox(height: 5),
                 Text(
-                  "Appointments",
+                  "Appointment",
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 12,
@@ -423,7 +423,7 @@ class _HomeScreenState extends State<BodyMain> {
           InkWell(
             onTap: () {
                         Navigator.pushNamedAndRemoveUntil(
-                            context, "/allDepartment", (route) => true);
+                            context, "/allPatient", (route) => true);
                         print("Firebase Button Clicked");
                    
             },
@@ -439,7 +439,7 @@ class _HomeScreenState extends State<BodyMain> {
                 ),
                 SizedBox(height: 5),
                 Text(
-                  "Departments",
+                  "Patients",
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 12,
